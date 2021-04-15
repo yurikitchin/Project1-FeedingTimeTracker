@@ -1,0 +1,16 @@
+main {
+    position: relative;
+}
+
+#div-with-user-name {
+    position: absolute;
+    display: none;
+    /* z-index: -1; */
+    
+}
+
+#baby-details {
+    position: absolute;
+    /* z-index: 2; */
+    display: none;
+}
