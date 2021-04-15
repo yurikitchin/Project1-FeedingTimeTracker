@@ -5,7 +5,7 @@ var babyWeight = document.querySelector("#babyweight")
 var babyDob = document.querySelector("#babydob")
 var divUserName = document.querySelector("#div-with-user-name");
 var submitButtonBaby = document.querySelector("#submitbuttonbaby")
-var userDetails = [{
+var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     userName: "",
     babyName: "",
     babyWeight: "",
@@ -25,6 +25,7 @@ function createNewUser(){
 }
 
 function loginFromStorage(){
+    window.location.href = "./feedingpage.html"
 
 }
 
@@ -63,6 +64,8 @@ function saveBabyName(e){
         userDetails[0].babyDob=babyDob;
         console.log(userDetails)
         localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails))
+        document.getElementById("baby-details").style.display="none";
+        window.location.href = "./feedingpage.html"
     }
 }
 
