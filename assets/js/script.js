@@ -6,6 +6,7 @@ var babyDob = document.querySelector("#babydob")
 var divUserName = document.querySelector("#div-with-user-name");
 var submitButtonBaby = document.querySelector("#submitbuttonbaby")
 var submitButtonLogin = document.querySelector('#submitbuttonlogin');
+var babyBookLink = document.querySelector('#babybooklink');
 
 var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     userName: "",
@@ -24,6 +25,19 @@ if(localStorage.length == 0){
 
 newUserButton.addEventListener("click", createNewUser)
 loginButton.addEventListener("click", loginFromStorage)
+
+//add a click event listener for navbar that will take user to the baby's details.
+babyBookLink.addEventListener("click", goToBabyBook)
+
+//this function will hide the user new user/login buttons, take the user to the baby book and attempt to load the baby's details from storage.
+function goToBabyBook(e){
+    e.preventDefault()
+    window.location.href = "./babybook.html"
+    document.getElementById("babynameptag").innerText=userDetails[0].babyName;
+    document.getElementById("babyweightptag").innerText=userDetails[0].babyWeight;
+    document.getElementById("babydobptag").innerText=userDetails[0].babyDob;
+
+}
 
 function createNewUser(){
 

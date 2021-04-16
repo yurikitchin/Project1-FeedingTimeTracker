@@ -8,6 +8,7 @@ var feedingSpan = document.querySelector('#start-time')
 var currentSide = document.querySelector('#current-side')
 var swapBtn = document.querySelector('#swapBtn')
 var stopBtn = document.querySelector('#stopBtn')
+var babyBookLink = document.querySelector('#babybooklink');
 
 var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     userName: "",
