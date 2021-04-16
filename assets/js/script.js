@@ -10,6 +10,7 @@ var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     babyName: "",
     babyWeight: "",
     babyDob: "",
+    lastBreast: "",
 }]
 var loginButton = document.querySelector("#submitbuttonlogin")
 var newUserButton = document.querySelector("#submitbuttonnewuser")
