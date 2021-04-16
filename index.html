@@ -34,7 +34,7 @@
             <a class="navbar-item" href="https://yurikitchin.github.io/Project1-FeedingTimeTracker/">
                 New Profile
               </a>
-            <a class="navbar-item" href="https://yurikitchin.github.io/Project1-FeedingTimeTracker/">
+            <a class="navbar-item" id="babybooklink" href="./babybook.html">
               Baby-Book
             </a>
             <a class="navbar-item" href="https://yurikitchin.github.io/Project1-FeedingTimeTracker/">
@@ -78,6 +78,7 @@
     <label class="label">Baby Name</label>
     <div class="control">
       <input class="input" type="text" placeholder="e.g Alex" id="babyname">
+      <p id="babynameptag"></p>
     </div>
   </div>
   
@@ -85,6 +86,7 @@
     <label class="label">Baby Weight</label>
     <div class="control">
       <input class="input" type="text" placeholder="weight in KG" id="babyweight">
+      <p id="babyweightptag"></p>
     </div>
   </div>
 
@@ -92,6 +94,7 @@
     <label class="label">Date of Birth</label>
     <div class="control">
       <input class="input" type="date" placeholder="DD/MM/YYYY" id="babydob">
+      <p id="babydobptag"></p>
    </div>
   </div>
   <input type="submit" value="submit" class="column is-half is-offset-one-quarter" id="submitbuttonbaby">
@@ -101,7 +104,9 @@
   <!-- <div class="hero-foot">
   </div> -->
 </section>
-    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src='./assets/js/script.js'></script>
+<!-- <script src='./assets/js/scriptfeedingpage.js'></script> -->
 </body>
 </html>
