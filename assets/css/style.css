@@ -14,3 +14,7 @@ main {
     /* z-index: 2; */
     display: none;
 }
+
+#feeding-div {
+    display: none;
+}

@@ -44,15 +44,23 @@
           </nav>
         </div>
 
-        <div class="container has-text-centered column is-half is-offset-one-quarter" id="div-with-login">
-          <h1>Press the left or right button to start feeding.</h1>
+        <div class="container has-text-centered column is-half is-offset-one-quarter" id="div-with-start-feed-btns">
+          <!-- created h1 with span to show which side last used ----------------->
+          <h1 id="last-side"><span id="side"></span>was used last</h1>
+          <h2>Press the left or right button to start feeding.</h2>
            <div>
-              
-                  <input type="button" value="left " id="feedstartleft">
-                  <input type="button" value="right" id="feedstartright">
-              
+              <input type="button" value="left " id="feedstartleft">
+              <input type="button" value="right" id="feedstartright">
           </div>
-      </div>
+        </div>
+
+        <!-- created timer div ---------------------------------------------------->
+        <div class="container has-text-centered column is-half is-offset-one-quarter" id="feeding-div">
+          <h2 id="current-side"></h2>
+          <h2 id="timer">Start Time: <span id="start-time"></span></h2>
+          <button id="swapBtn">Swap Side</button>
+          <button id="stopBtn">Stop</button>
+        </div>
 
         <div class="hero-foot">
           <nav class="tabs is-boxed is-fullwidth">
@@ -81,7 +89,8 @@
           </nav>
         </div>
       
-        <script src='./assets/js/scriptfeedingpage.js'></script>
+        <!-- had to put moment script before script.js --------------------------->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src='./assets/js/scriptfeedingpage.js'></script>
 </body>
 </html>

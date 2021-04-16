@@ -5,15 +5,22 @@ var babyWeight = document.querySelector("#babyweight")
 var babyDob = document.querySelector("#babydob")
 var divUserName = document.querySelector("#div-with-user-name");
 var submitButtonBaby = document.querySelector("#submitbuttonbaby")
+var submitButtonLogin = document.querySelector('#submitbuttonlogin');
+
 var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     userName: "",
     babyName: "",
     babyWeight: "",
     babyDob: "",
+    lastBreast: "",
 }]
+
 var loginButton = document.querySelector("#submitbuttonlogin")
 var newUserButton = document.querySelector("#submitbuttonnewuser")
 
+if(localStorage.length == 0){
+    submitButtonLogin.setAttribute('style', 'display:none')
+}
 
 newUserButton.addEventListener("click", createNewUser)
 loginButton.addEventListener("click", loginFromStorage)
