@@ -3,8 +3,11 @@ var rightBtn = document.querySelector('#feedstartright')
 var lastSideH1 = document.querySelector('#last-side')
 var sideSpan = document.querySelector('#side')
 var startBtnDiv = document.querySelector('#div-with-start-feed-btns')
-var timerDiv = document.querySelector('#timer-div')
-var timer = document.querySelector('#timer')
+var feedingDiv = document.querySelector('#feeding-div')
+var feedingSpan = document.querySelector('#start-time')
+var currentSide = document.querySelector('#current-side')
+var swapBtn = document.querySelector('#swapBtn')
+var stopBtn = document.querySelector('#stopBtn')
 
 var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     userName: "",
@@ -13,6 +16,12 @@ var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     babyDob: "",
     lastBreast: "",
 }]
+
+// Moment.js variables---------------------------------------------------------
+const m = moment()
+var currentMoment = m.format('ddd LTS')
+
+
 
 // Shows which breast was last used/ hides if first time---------------------------
 if(userDetails[0].lastBreast == ''){
@@ -23,6 +32,7 @@ if(userDetails[0].lastBreast == ''){
 
 // Left/Right button event listeners and Functions-----------------------------------
 // Functions set selected side to userDetails array 
+// Hides startBtnDiv and excecutes startTimer()
 leftBtn.addEventListener('click', feedLeft)
 rightBtn.addEventListener('click', feedRight)
 
@@ -38,21 +48,52 @@ function feedRight(){
     startTimer()
 }
 
+// Start Timer function------------------------------------------------------------
 // Sets userDetails with updated last side to local storage.
-// Starts timer/ records time of feed
+// Displays current side
+// Displays start time of feed
+// Display stop/swap buttons
+
+// Start a Timer?
 // Display Quote of the day?
-// Display stop/swap buttons?
-// Record time and duration of feed?
+// Change currentSide on swap?
+// Record duration of feed on stop?
 function startTimer(){
     localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails))
-    timerDiv.setAttribute('style', 'display:block')
+    feedingDiv.setAttribute('style', 'display:block')
+    feedingSpan.textContent = currentMoment
+    currentSide.textContent = userDetails[0].lastBreast
+    swapBtn.addEventListener('click', swapSide)
+    // stopBtn.addEventListener('click', stopFeed)
+}
+
+// swapSide button function--------------------------------------------------------
+function swapSide(){
+    if(userDetails[0].lastBreast == 'Right'){
+        userDetails[0].lastBreast = 'Left'
+    }else{
+        userDetails[0].lastBreast = 'Right'
+    }
+    currentSide.textContent = userDetails[0].lastBreast
+
+    
+}
+
+// stopFeed function-------------------------------------------------------------
+// save current side to userDetails
+// save updated userDetails to Local Storage
+
+// stop timer?
+// show next div/feeding deatails?
+// hide feedingDiv?
+function stopFeed(){
+    userDetails[0].lastBreast = currentSide
+    localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails))
 }
 
 
 
-
-
-
-console.log(userDetails)
 console.log(userDetails[0].lastBreast)
+console.log(currentMoment)
+console.log(userDetails)
 // localStorage.clear()
