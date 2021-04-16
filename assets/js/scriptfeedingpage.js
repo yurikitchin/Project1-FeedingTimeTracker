@@ -64,7 +64,7 @@ function startTimer(){
     feedingSpan.textContent = currentMoment
     currentSide.textContent = userDetails[0].lastBreast
     swapBtn.addEventListener('click', swapSide)
-    // stopBtn.addEventListener('click', stopFeed)
+    stopBtn.addEventListener('click', stopFeed)
 }
 
 // swapSide button function--------------------------------------------------------
@@ -76,6 +76,7 @@ function swapSide(){
     }
     currentSide.textContent = userDetails[0].lastBreast
 
+    console.log(userDetails[0].lastBreast)
     
 }
 
@@ -87,13 +88,15 @@ function swapSide(){
 // show next div/feeding deatails?
 // hide feedingDiv?
 function stopFeed(){
-    userDetails[0].lastBreast = currentSide
-    localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails))
+    userDetails[0].lastBreast = currentSide.textContent;
+    localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails));
+    console.log(userDetails)
 }
 
 
 
-console.log(userDetails[0].lastBreast)
+
 console.log(currentMoment)
 console.log(userDetails)
+
 // localStorage.clear()
