@@ -1,6 +1,4 @@
 //var babyBookLink = document.querySelector('#babybooklink');
-console.log("hello");
-debugger
 var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     userName: "",
     babyName: "",

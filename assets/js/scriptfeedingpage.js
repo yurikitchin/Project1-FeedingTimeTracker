@@ -102,7 +102,9 @@ console.log(userDetails)
 
 
 
-
+// Quote of the day-----------------------------------------------------------------
+// added quote and author and background to feeding page
+// need to style background
 var requestUrl = `https://quotes.rest/qod`;
 
 var quoteFetchUrl = fetch(requestUrl)
@@ -112,11 +114,13 @@ function quoteFetchURLResolves(ResponseOfAPromise){
 }
 
 var returnAList = quoteFetchUrl.then(quoteFetchURLResolves)
-
 returnAList.then(giveBackQod)
 
 function giveBackQod(DataFromJSONResponse){
-    console.log(DataFromJSONResponse.contents.quotes[0].quote)
+    console.log(DataFromJSONResponse)
+    document.getElementById('quote').textContent = DataFromJSONResponse.contents.quotes[0].quote
+    document.getElementById('author').textContent = '"'+ DataFromJSONResponse.contents.quotes[0].author+'"'
+    document.getElementById('quoteDiv').style.background = 'url('+DataFromJSONResponse.contents.quotes[0].background+')'
 }
 
 
