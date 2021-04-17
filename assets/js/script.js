@@ -55,7 +55,6 @@ function loginFromStorage(){
 submitButtonUser.addEventListener("click",saveUserName)
 
 function saveUserName(e){
-//    debugger
     e.preventDefault()
     userName=userName.value
     console.log(userName)

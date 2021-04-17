@@ -4,14 +4,11 @@ main {
 
 #div-with-user-name {
     position: absolute;
-    display: none;
-    /* z-index: -1; */
-    
+    display: none;    
 }
 
 #baby-details {
     position: absolute;
-    /* z-index: 2; */
     display: none;
 }
 
