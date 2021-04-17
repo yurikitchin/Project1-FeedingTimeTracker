@@ -92,6 +92,7 @@ function stopFeed(){
     userDetails[0].lastBreast = currentSide.textContent;
     localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails));
     console.log(userDetails)
+    window.location.href = "./babybook.html"
 }
 
 
