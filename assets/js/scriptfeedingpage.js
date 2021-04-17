@@ -118,8 +118,8 @@ returnAList.then(giveBackQod)
 
 function giveBackQod(DataFromJSONResponse){
     console.log(DataFromJSONResponse)
-    document.getElementById('quote').textContent = DataFromJSONResponse.contents.quotes[0].quote
-    document.getElementById('author').textContent = '"'+ DataFromJSONResponse.contents.quotes[0].author+'"'
+    document.getElementById('quote').textContent = '"'+ DataFromJSONResponse.contents.quotes[0].quote+'"'
+    document.getElementById('author').textContent = DataFromJSONResponse.contents.quotes[0].author
     document.getElementById('quoteDiv').style.background = 'url('+DataFromJSONResponse.contents.quotes[0].background+')'
 }
 
