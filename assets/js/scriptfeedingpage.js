@@ -100,4 +100,45 @@ function stopFeed(){
 console.log(currentMoment)
 console.log(userDetails)
 
+
+
+
+var requestUrl = `https://quotes.rest/qod`;
+
+var quoteFetchUrl = fetch(requestUrl)
+
+function quoteFetchURLResolves(ResponseOfAPromise){
+  return ResponseOfAPromise.json();
+}
+
+var returnAList = quoteFetchUrl.then(quoteFetchURLResolves)
+
+returnAList.then(giveBackQod)
+
+function giveBackQod(DataFromJSONResponse){
+    console.log(DataFromJSONResponse.contents.quotes[0].quote)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // localStorage.clear()
