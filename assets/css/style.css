@@ -15,3 +15,57 @@ main {
 #feeding-div {
     display: none;
 }
+
+
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 27px;
+}
+
+#heroBaby {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    
+}
+
+#libraryHero {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 769px) {
+   .column.is-offset-one-quarter{
+   margin: auto;}
+   #baby-book{
+       margin-top: 70px;
+   }
+   
+}
+
+@media(max-width: 700px){
+    #quote{
+        font-size: 20px;
+        font-style: italic;
+       }
+}
+
+#baby-book {
+    text-align: center;
+    /* margin-top: 70px; */
+}
+
+#quoteDiv {
+    width: 80vw;
+    height: 30vh;
+    background: cover;
+}
+
+#quote{
+    font-style: italic;
+   }
