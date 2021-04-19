@@ -14,6 +14,7 @@ var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     babyWeight: "",
     babyDob: "",
     lastBreast: "",
+    lastTime: "",
 }]
 
 var loginButton = document.querySelector("#submitbuttonlogin")
@@ -82,6 +83,7 @@ function saveBabyName(e){
         userDetails[0].babyName=babyName;
         userDetails[0].babyWeight=babyWeight;
         userDetails[0].babyDob=babyDob;
+        userDetails[0].lastBreast='';
         console.log(userDetails)
         localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails))
         document.getElementById("baby-details").style.display="none";
