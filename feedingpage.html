@@ -15,14 +15,11 @@
           <nav class="navbar">
             <div class="container">
               <div class="navbar-brand">
-                <a class="navbar-item">
-                  <h2>Feeding Time Tracker</h2>
-                </a>
-                
+                <h2 class="navbar-item">Feeding Time Tracker</h2>
               </div>
               <div id="navbarMenuHeroB" class="navbar-end">
                 <div class="navbar-end">
-                  <a class="navbar-item is-active" href="./index.html">
+                  <a class="navbar-item" href="./index.html">
                     Home
                   </a>
                   <a class="navbar-item" href="./index.html">
@@ -51,8 +48,8 @@
           <h2 id="last-side"><span id="side"></span>was used last</h2>
           <h2>Press the left or right button to start feeding.</h2>
            <div>
-              <input type="button" value="left " id="feedstartleft">
-              <input type="button" value="right" id="feedstartright">
+              <input type="button" value="left " id="feedstartleft" class="btn">
+              <input type="button" value="right" id="feedstartright" class="btn">
           </div>
         </div>
 
@@ -60,8 +57,9 @@
         <div class="container has-text-centered column is-half is-offset-one-quarter" id="feeding-div">
           <h2 id="current-side"></h2>
           <h2 id="timer">Start Time: <span id="start-time"></span></h2>
-          <button id="swapBtn">Swap Side</button>
-          <button id="stopBtn">Stop</button>
+          <h2 id="timer">Last Feed: <span id="last-time"></span></h2>
+          <button id="swapBtn" class="btn">Swap Side</button>
+          <button id="stopBtn" class="btn">Stop</button>
         </div>
 
       

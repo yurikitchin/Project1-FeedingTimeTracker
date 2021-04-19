@@ -5,6 +5,7 @@ var sideSpan = document.querySelector('#side')
 var startBtnDiv = document.querySelector('#div-with-start-feed-btns')
 var feedingDiv = document.querySelector('#feeding-div')
 var feedingSpan = document.querySelector('#start-time')
+var lastTime = document.querySelector('#last-time')
 var currentSide = document.querySelector('#current-side')
 var swapBtn = document.querySelector('#swapBtn')
 var stopBtn = document.querySelector('#stopBtn')
@@ -16,6 +17,7 @@ var userDetails = JSON.parse(localStorage.getItem("SavedProfileDetails")) || [{
     babyWeight: "",
     babyDob: "",
     lastBreast: "",
+    lastTime: "",
 }]
 
 // Moment.js variables---------------------------------------------------------
@@ -63,6 +65,7 @@ function startTimer(){
     localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails))
     feedingDiv.setAttribute('style', 'display:block')
     feedingSpan.textContent = currentMoment
+    lastTime.textContent = userDetails[0].lastTime
     currentSide.textContent = userDetails[0].lastBreast
     swapBtn.addEventListener('click', swapSide)
     stopBtn.addEventListener('click', stopFeed)
@@ -90,6 +93,7 @@ function swapSide(){
 // hide feedingDiv?
 function stopFeed(){
     userDetails[0].lastBreast = currentSide.textContent;
+    userDetails[0].lastTime = feedingSpan.textContent;
     localStorage.setItem("SavedProfileDetails",JSON.stringify(userDetails));
     console.log(userDetails)
     window.location.href = "./babybook.html"

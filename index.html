@@ -17,14 +17,11 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item">
-            <h2>Feeding Time Tracker</h2>
-          </a>
-          
+            <h2 class="navbar-item">Feeding Time Tracker</h2>
         </div>
         <div id="navbarMenuHeroB" class="navbar-end">
           <div class="navbar-end">
-            <a class="navbar-item is-active" href="./index.html">
+            <a class="navbar-item" href="./index.html">
               Home
             </a>
             <a class="navbar-item" href="./index.html">
@@ -45,26 +42,24 @@
 
 
 
-<main class="hero-body hero-index" >
+<main class="hero-body hero-index" id="mainIndex">
+  <h1>Welcome to Feeding Time Tracker</h1>
+  <div class="image">
+    <img src="./assets/images/babyPhoto.png" alt="stylized woman breastfeeding" id="picasso">
+  </div>
 
     <div class="container has-text-centered column is-half is-offset-one-quarter" id="div-with-login">
-        <h1>Welcome to Feeding Time Tracker</h1>
-         <div>
-            
-                <input type="button" value="login" id="submitbuttonlogin">
-                <input type="button" value="new user" id="submitbuttonnewuser">
-            
-        </div>
+          <input type="button" value="login" id="submitbuttonlogin" class="btn">
+          <input type="button" value="new user" id="submitbuttonnewuser" class="btn">
     </div>
 
     <div class="container has-text-centered column is-half is-offset-one-quarter" id="div-with-user-name">
-      <h1>Welcome to Feeding Time Tracker</h1>
       <h2>Please enter your name below</h2>
       <div>
-          <form>
-              <input class="input is-rounded is-small" type="text" id="username" placeholder="Enter name here!">
-              <input type="submit" value="submit" id="submitbuttonuser">
-          </form>
+        <form>
+          <input class="input is-rounded is-small" type="text" id="username" placeholder="Enter name here!">
+          <input type="submit" value="submit" id="submitbuttonuser" class="btn">
+        </form>
       </div>
   </div>
 
@@ -93,7 +88,7 @@
       <p id="babydobptag"></p>
    </div>
   </div>
-  <input type="submit" value="submit" class="column is-half is-offset-one-quarter" id="submitbuttonbaby">
+  <input type="submit" value="submit" class="column is-half is-offset-one-quarter btn" id="submitbuttonbaby">
 </section>
 </main>  
 

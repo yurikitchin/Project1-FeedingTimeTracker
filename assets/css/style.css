@@ -1,22 +1,30 @@
 main {
     position: relative;
 }
+#mainIndex{
+    flex-direction: column;
+}
+
+#picasso{
+    height: 50vh;
+    width: auto;
+    margin-top: 50px;
+}
 
 #div-with-user-name {
-    position: absolute;
     display: none;    
 }
 
 #baby-details {
-    position: absolute;
     display: none;
 }
+
+#username{
+margin-top: 30px;}
 
 #feeding-div {
     display: none;
 }
-
-
 
 h1 {
     font-size: 40px;
@@ -26,12 +34,35 @@ h2 {
     font-size: 27px;
 }
 
+.btn{
+    width: 80px;
+    height: 40px;
+    margin: 30px 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background: #238cd1;
+    color: #fff;
+    
+}
+
+#current-side{
+    font-size: 3rem;
+    font-style:italic;
+}
+
+#side{
+    font-size: 2rem;
+    font-style: italic;
+}
+
 #heroBaby {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
-    
 }
 
 #libraryHero {
@@ -39,33 +70,71 @@ h2 {
     justify-content: space-between;
 }
 
-@media screen and (min-width: 769px) {
-   .column.is-offset-one-quarter{
-   margin: auto;}
-   #baby-book{
-       margin-top: 70px;
-   }
-   
-}
-
-@media(max-width: 700px){
-    #quote{
-        font-size: 20px;
-        font-style: italic;
-       }
-}
-
 #baby-book {
     text-align: center;
-    /* margin-top: 70px; */
 }
 
 #quoteDiv {
     width: 80vw;
-    height: 30vh;
+    height: 40vh;
     background: cover;
+    margin: 60px auto 0;
 }
 
 #quote{
     font-style: italic;
    }
+
+#div-with-start-feed-btns, #feeding-div{
+       margin-top: 40px;
+   }
+
+.link{
+    text-decoration: underline;
+}
+
+   /* Media Queries----------------------------------------------- */
+   @media screen and (min-width: 769px) {
+    .column.is-offset-one-quarter{
+    margin: auto;}
+    #baby-book{
+        margin-top: 70px;
+    }
+ }
+ 
+ @media(max-width: 700px){
+     #quote{
+         font-size: 20px;
+         font-style: italic;
+    }
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    h2{
+        font-size: 20px;
+    }
+    #submitbuttonuser{
+        margin: 5px;
+    }
+    #username{
+        margin-top: 5px;
+    }
+    
+    #picasso{
+        height: 40vh;
+        margin-top: 15px;
+    }
+    #mainIndex{
+        padding: 10px;
+    }
+    .navbar-item{
+        text-align: center;
+    }
+    a.navbar-item{
+        border-bottom: solid 1px rgb(153, 153, 153);
+    }
+    #heroBaby{
+        padding: 10px;
+    }
+ }
