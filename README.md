@@ -43,6 +43,8 @@ The feeding time tracker is a web app that helps mothers manage breast feeding t
 
 - 'They Said So' is the server-side API used to fetch inspirational quotes of the day https://theysaidso.com/
 
+- Google Presentation Slide deck may be found here https://docs.google.com/presentation/d/1geIAblpy1-8xYXnf-1V8h-2QwottIjb0VRg37zG52uw/edit?usp=sharing
+
 - 'Wikipedia' is the server-side API used to fetch general breastfeeding information https://www.mediawiki.org/wiki/API:Main_page 
 
 ## Contributers
